@@ -31,3 +31,6 @@ kernel.panic=5
 #net.ipv6.conf.default.disable_ipv6=1" | sudo tee -a /etc/sysctl.conf
 
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo &&
+
+curl -fsSL https://tailscale.com/install.sh | sh
+
