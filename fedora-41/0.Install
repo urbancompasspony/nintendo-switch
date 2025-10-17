@@ -1,0 +1,44 @@
+
+curl -sSL https://raw.githubusercontent.com/urbancompasspony/bashrc/main/install.sh | bash
+
+sudo mkdir /home/administrador
+sudo chmod 777 -R /home/administrador
+
+sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_arm64 -O /usr/local/bin/yq
+sudo chmod +x /usr/local/bin/yq
+
+sudo dnf update -y
+
+sudo dnf install build-essential \
+cabextract chromium-codecs-ffmpeg-extra fonts-liberation gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi liba52-0.7.4 libaribb24-0 libavcodec-extra \
+net-tools netdiscover iperf arp-scan traceroute speedtest-cli whois openvpn curl dialog duf gparted gnome-disk-utility vlc cifs-utils samba smbclient liblchown-perl p7zip unrar lz4 rclone rsnapshot iotop \
+printer-driver-escpr hplip printer-driver-all stress lm-sensors cmatrix btop inxi tree dialog btrfs-progs filelight libreoffice libreoffice-l10n-pt-br sshpass \
+libssl3 pcscd opensc xmlstarlet xrdp openssh-server adsys adsys-windows samba-ad-dc sssd-ad sssd-tools realmd adcli smb4k distrobox docker.io screen jq keepassxc terminator chromium-browser
+
+sudo systemctl disable systemd-networkd-wait-online.service
+sudo systemctl mask systemd-networkd-wait-online.service
+
+sudo timedatectl set-timezone Etc/GMT+3
+sudo timedatectl set-local-rtc 1
+
+    echo -e "kernel.sysrq=1
+vm.panic_on_oom=1
+vm.swappiness=10
+kernel.panic=5
+#net.ipv4.ip_forward=1
+#net.ipv6.conf.all.disable_ipv6=1
+#net.ipv6.conf.default.disable_ipv6=1" | sudo tee -a /etc/sysctl.d/sysctl.conf
+
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo &&
+
+curl -fsSL https://tailscale.com/install.sh | sh
+Access tailscale.com and rename to $HOSTNAME-fedora41
+
+EASY MENUS REPO!
+
+ssh-keygen
+
+ssh-copy-id administrador@
+
+sudo mkdir /mnt/particular; sudo nano /etc/fstab
+administrador@olympus:/mnt/md0/Particular /mnt/particular fuse.sshfs _netdev,user,idmap=user,identityfile=/home/user/.ssh/id_rsa,allow_other,default_permissions 0 0
