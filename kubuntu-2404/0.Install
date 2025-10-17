@@ -42,6 +42,3 @@ ssh-keygen
 
 ssh-copy-id administrador@
 
-sudo mkdir /mnt/particular
-sudo nano /etcfstab
-administrador@olympus:/mnt/md0/Particular /mnt/particular fuse.sshfs _netdev,user,idmap=user,identityfile=/home/user/.ssh/id_rsa,allow_other,default_permissions 0 0
