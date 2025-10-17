@@ -35,3 +35,7 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 curl -fsSL https://tailscale.com/install.sh | sh
 
 EASYMENUS REPO!
+
+ssh-keygen
+
+ssh-copy-id administrador@
