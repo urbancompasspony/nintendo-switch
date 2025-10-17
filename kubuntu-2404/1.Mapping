@@ -3,4 +3,10 @@ sudo nano /etc/fuse.conf
 Uncomment:
 user_allow_other
 
+ssh-copy-id ...
+
+Test:
+sshfs administrador@olympus:/mnt/md0/Particular /mnt/particular -o IdentityFile=/home/ztge/.ssh/id_ed25519
+
+/etc/fstab
 administrador@olympus:/mnt/md0/Particular /mnt/particular fuse.sshfs _netdev,user,idmap=user,IdentityFile=/home/ztge/.ssh/id_ed25519,allow_other,default_permissions 0 0
