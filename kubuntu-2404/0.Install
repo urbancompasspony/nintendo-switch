@@ -15,7 +15,7 @@ net-tools netdiscover iperf arp-scan traceroute speedtest-cli whois openvpn curl
 printer-driver-escpr hplip printer-driver-all stress lm-sensors cmatrix btop inxi tree dialog btrfs-progs filelight libreoffice libreoffice-l10n-pt-br sshpass \
 libssl3 pcscd opensc xmlstarlet xrdp openssh-server adsys adsys-windows samba-ad-dc sssd-ad sssd-tools realmd adcli smb4k distrobox docker.io screen jq keepassxc terminator chromium-browser
 
-sudo usermod -aG docker $USER
+sudo usermod -aG docker ztge
 
 sudo systemctl disable systemd-networkd-wait-online.service
 sudo systemctl mask systemd-networkd-wait-online.service
