@@ -16,7 +16,7 @@ sudo apt install build-essential \
 cabextract chromium-codecs-ffmpeg-extra fonts-liberation gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi liba52-0.7.4 libaribb24-0 libavcodec-extra \
 net-tools netdiscover iperf arp-scan traceroute speedtest-cli whois openvpn curl dialog duf gparted gnome-disk-utility vlc cifs-utils samba smbclient liblchown-perl p7zip unrar lz4 rclone rsnapshot iotop \
 printer-driver-escpr hplip printer-driver-all stress lm-sensors cmatrix btop inxi tree dialog btrfs-progs filelight libreoffice libreoffice-l10n-pt-br sshpass \
-libssl3 pcscd opensc xmlstarlet xrdp openssh-server adsys adsys-windows samba-ad-dc sssd-ad sssd-tools realmd adcli smb4k distrobox docker.io screen jq keepassxc terminator
+libssl3 pcscd opensc xmlstarlet xrdp openssh-server adsys adsys-windows samba-ad-dc sssd-ad sssd-tools realmd adcli smb4k distrobox docker.io screen jq keepassxc terminator distrobox
 
     sudo install -d -m 0755 /etc/apt/keyrings &&
     curl -sSL https://packages.mozilla.org/apt/repo-signing-key.gpg | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc >/dev/null &&
