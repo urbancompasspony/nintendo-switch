@@ -66,8 +66,3 @@ ssh-copy-id administrador@
 sudo apt purge chromium-browser -y
 sudo apt autoremove
 # COMMENT /etc/apt/sources.list.d/theofficialgman-L4T.list
-
-sudo add-apt-repository ppa:savoury1/ffmpeg4
-sudo add-apt-repository ppa:savoury1/chromium
-sudo apt-get update
-sudo apt-get install chromium-browser
