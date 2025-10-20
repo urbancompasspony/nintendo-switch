@@ -2,3 +2,6 @@
 # PiApps
 wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
 
+# More
+sudo add-apt-repository ppa:xtradeb/apps
+sudo apt update
