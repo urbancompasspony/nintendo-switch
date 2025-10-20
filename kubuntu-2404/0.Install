@@ -13,7 +13,7 @@ sudo apt purge unattended-upgrades plasma-discover-backend-snap -y
 curl -fsS https://dl.brave.com/install.sh | sh
 
 sudo apt install build-essential \
-cabextract chromium-codecs-ffmpeg-extra fonts-liberation gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi liba52-0.7.4 libaribb24-0 libavcodec-extra \
+cabextract fonts-liberation gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi liba52-0.7.4 libaribb24-0 libavcodec-extra \
 net-tools netdiscover iperf arp-scan traceroute speedtest-cli whois openvpn curl dialog duf gparted gnome-disk-utility vlc cifs-utils samba smbclient liblchown-perl p7zip unrar lz4 rclone rsnapshot iotop \
 printer-driver-escpr hplip printer-driver-all stress lm-sensors cmatrix btop inxi tree dialog btrfs-progs filelight libreoffice libreoffice-l10n-pt-br sshpass \
 libssl3 pcscd opensc xmlstarlet xrdp openssh-server adsys adsys-windows samba-ad-dc sssd-ad sssd-tools realmd adcli smb4k distrobox docker.io screen jq keepassxc terminator distrobox
@@ -61,3 +61,13 @@ ssh-keygen
 
 ssh-copy-id administrador@
 
+# CHROMIUM IS CRASHING!
+
+sudo apt purge chromium-browser -y
+sudo apt autoremove
+# COMMENT /etc/apt/sources.list.d/theofficialgman-L4T.list
+
+sudo add-apt-repository ppa:savoury1/ffmpeg4
+sudo add-apt-repository ppa:savoury1/chromium
+sudo apt-get update
+sudo apt-get install chromium-browser
